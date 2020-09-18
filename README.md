@@ -1,1 +1,1 @@
-# BME-Computergraphics
+# BME-ComputerGraphics
