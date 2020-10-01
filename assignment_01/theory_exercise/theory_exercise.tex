@@ -1,0 +1,89 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx} %This allows to include eps figures
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+\usepackage{layout}
+\usepackage{etoolbox}
+\usepackage{mathabx}
+% This is to include code
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstdefinestyle{Python}{
+    language        = Python,
+    basicstyle      = \ttfamily,
+    keywordstyle    = \color{blue},
+    keywordstyle    = [2] \color{teal}, % just to check that it works
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+%\renewcommand{\qedsymbol}{\filledbox}
+
+\title{Assignment 01}%replace X with the appropriate number
+\author{Thomas Buchegger, Carolina Duran, Nalet Meinen \\ %replace with your name
+Computer Graphics
+}
+
+\maketitle
+
+\section{Derivation for the Cylinder Intersections}
+
+The implicit representation of a cylinder goes as
+\[ \|(x - c) \times \vec a\|^2 - r^2 = 0 \]
+
+\noindent Where $\vec a$ is the direction of the cylinder from the center 
+\newline
+
+\noindent We plug in the ray parametrization form
+
+\[ x = t \cdot \vec d + o \]
+
+\noindent therefore we get
+
+\[ \|(t \cdot d + o - c) \times \vec a\|^2 - r^2 = 0 \]
+
+
+\noindent resulting in the final from
+
+\begin{align*} t^2 \cdot \|\vec d \times \vec a\|^2 + t\cdot 2(\vec d \times \vec a)(o-c)\times \vec a + \|(o-c)\times \vec a\|^2 -r^2 = 0
+\end{align*}
+
+\section{Derivation for the Cylinder Intersection Normal}
+The normal which points from the cylinder outwards at point $x$ can be calculated by two consecutive cross products:
+ \[ \vec n = \frac{(\vec a \times (x-c))\times \vec a}{\|(\vec a \times (x-c))\times \vec a\|}\]
+
+
+\end{document}

@@ -33,5 +33,31 @@ intersect(const Ray&  _ray,
      * - store normal at _intersection_point in `_intersection_normal`.
      * - return whether there is an intersection with t > 0
     */
-    return false;
+
+    const vec3 &dir = _ray.direction;
+    const vec3   oc = _ray.origin - center;
+
+    std::array<double, 2> t;
+    size_t nsol = solveQuadratic(dot(dir, dir) - dot(axis, dir) * dot(axis, dir),
+                                 2 * (dot(dir, oc) - dot(axis, dir) * dot(axis, oc)),
+                                 dot(oc, oc) - dot(axis, oc) * dot(axis, oc) - radius * radius, t);
+
+    _intersection_t = NO_INTERSECTION;
+
+    // Find the closest valid solution (in front of the viewer)
+    for (size_t i = 0; i < nsol; ++i) {
+        if (t[i] <= 0) continue;
+        if (2 * abs(dot(_ray(t[i]) - center, axis)) < height)
+        {
+            _intersection_t = std::min(_intersection_t, t[i]);
+        }
+    }
+
+    if (_intersection_t == NO_INTERSECTION) return false;
+
+    _intersection_point  = _ray(_intersection_t);
+    _intersection_normal = cross(cross(axis,_intersection_point-center),axis);
+    _intersection_normal = _intersection_normal / norm(_intersection_normal);
+
+    return true;
 }
