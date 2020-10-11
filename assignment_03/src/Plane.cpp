@@ -36,7 +36,19 @@ intersect(const Ray& _ray,
           double&    _intersection_t ) const
 {
 
-    // \todo Copy your assignment 1 solution here.
+    const double dn = dot(_ray.direction, normal);
+
+    if (fabs(dn) > std::numeric_limits<double>::min())
+    {
+        const double t = dot(normal, center-_ray.origin) / dn;
+        if (t > 0)
+        {
+            _intersection_t      = t;
+            _intersection_point  = _ray(t);
+            _intersection_normal = normal;
+            return true;
+        }
+    }
 
     return false;
 }

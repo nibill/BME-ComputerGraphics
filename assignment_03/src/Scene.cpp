@@ -98,7 +98,18 @@ vec3 Scene::trace(const Ray& _ray, int _depth)
     vec3 color = lighting(point, normal, -_ray.direction, object->material);
 
 
-    // \todo Paste your assignment 2 solution here.
+    // recursive call to collect color from reflections
+    if (object->material.mirror > 0.0 && _depth < max_depth)
+    {
+        vec3 refl_dir = reflect(_ray.direction, normal);
+        Ray  reflected_ray(point + reflection_ray_offset * refl_dir, refl_dir);
+        double mmirror = object->material.mirror;
+        //linear interpolation of reflected and current color
+        color = (1.0 - mmirror) * color + mmirror * trace(reflected_ray, _depth+1);
+
+        //!simple addition is wrong!:
+        //color+= mmirror * trace(reflected_ray, _depth+1);
+    }
 
     return color;
 }
@@ -131,8 +142,40 @@ bool Scene::intersect(const Ray& _ray, Object_ptr& _object, vec3& _point, vec3& 
 vec3 Scene::lighting(const vec3& _point, const vec3& _normal, const vec3& _view, const Material& _material)
 {
 
-    // \todo Paste your assignment 2 solution here.
-    vec3 color = (_normal + vec3(1)) / 2.0;
+    vec3 color = ambience * _material.ambient;
+
+    // loop over each light source
+    for (const Light& light: lights)
+    {
+        // compute light direction and distance from light source
+        vec3   light_direction = normalize(light.position - _point);
+        double light_distance  = distance(light.position, _point);
+
+
+        // point in shadow? shoot shadow-ray
+        Ray shadow_ray(_point + shadow_ray_offset * light_direction, light_direction);
+
+        vec3    p, n;
+        double  t;
+        Object_ptr o;
+        if (intersect(shadow_ray, o, p, n, t) && (t < light_distance))
+            continue;
+
+
+        // add light source's diffuse term
+        double NL = dot(light_direction, _normal);
+        if (NL > 0.0)
+        {
+            color += NL * (light.color * _material.diffuse);
+
+            // specular term
+            double RV = dot(_view, mirror(light_direction, _normal));
+            if (RV > 0.0)
+            {
+                color += (light.color * _material.specular) * pow(RV, _material.shininess);
+            }
+        }
+    }
 
     return color;
 }
