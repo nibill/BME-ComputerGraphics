@@ -1,0 +1,163 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						4
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "lib/glew",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib/glew",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lib/glfw",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lib/glfw"
+				},
+				{
+					"build" : "lib/glfw/src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib/glfw/src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "lib/lodePNG",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib/lodePNG",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						4
+					],
+					"name" : "exlsystems",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "glew::@f404f1a77aed5dbbeead",
+					"jsonFile" : "target-glew-Debug-54ba551f867e097a1c7b.json",
+					"name" : "glew",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@17f284a5fc0809a54549",
+					"jsonFile" : "target-glfw-Debug-1af83bb8e0b67a73f3b0.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "lodePNG::@e23d7991f59308b1922a",
+					"jsonFile" : "target-lodePNG-Debug-c0556151409fb62b92af.json",
+					"name" : "lodePNG",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lsys::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lsys-Debug-2515be594a992db3758a.json",
+					"name" : "lsys",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug",
+		"source" : "C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/assignment_08"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

@@ -1,0 +1,14 @@
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/CMakeFiles/lsys.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glew/CMakeFiles/glew.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glew/CMakeFiles/edit_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glew/CMakeFiles/rebuild_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glfw/CMakeFiles/edit_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glfw/CMakeFiles/rebuild_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glfw/src/CMakeFiles/rebuild_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glfw/src/CMakeFiles/glfw.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/glfw/src/CMakeFiles/edit_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/lodePNG/CMakeFiles/lodePNG.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/lodePNG/CMakeFiles/edit_cache.dir
+C:/Users/nalet.meinen/Projects/BME-ComputerGraphics/build-assignment_08-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/lib/lodePNG/CMakeFiles/rebuild_cache.dir
